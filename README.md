@@ -1,2 +1,2 @@
-# Twitter---app
+# Twitter-app
 Simply twitter app
