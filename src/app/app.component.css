@@ -38,6 +38,7 @@ p {
 .details {
    display: flex;
    align-items: baseline;
+   position: relative;
 }
 
 .twit_body {
@@ -48,8 +49,9 @@ p {
    margin-top: 10px;
 }
 
-.margin_left {
+.twit_content {
    margin-left: 10px;
+   width: 100%;
 }
 
 .photo {
@@ -58,4 +60,10 @@ p {
 
 .text {
    max-width: 500px;
+}
+
+.close {
+   cursor: pointer;
+   position: absolute;
+   right: 0px;
 }

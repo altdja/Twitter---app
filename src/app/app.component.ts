@@ -27,4 +27,8 @@ export class AppComponent {
         }
       });
   }
+
+  delete(i) {
+    this.tweets.splice(i, 1);
+  }
 }

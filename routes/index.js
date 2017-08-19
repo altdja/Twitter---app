@@ -11,7 +11,7 @@ module.exports = function (app) {
 
     app.post('/api/search', (req, res) => {
         if (req.body.query) {
-            twitter.get('search/tweets', { q: req.body.query, count: 10 }, function (err, data, response) {
+            twitter.get('search/tweets', { q: req.body.query, count: 50 }, function (err, data, response) {
                 return res.json({ code: 200, data: data.statuses });
             });
         }
