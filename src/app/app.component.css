@@ -55,3 +55,7 @@ p {
 .photo {
    max-width: 100%;
 }
+
+.text {
+   max-width: 500px;
+}
