@@ -1,0 +1,57 @@
+.main {
+   max-width: 600px;
+   margin: 0 auto;
+}
+
+.main h2 {
+   text-align: center;
+}
+
+.input {
+   height: 30px;
+   width: 100%;
+   border: 1px solid gray;
+   padding: 10px;
+   font-size: 18px;
+}
+
+form {
+   display: flex;
+}
+
+.btn {
+   background-color: #cacaca;
+   border: 1px solid gray;
+   border-left: none;
+   cursor: pointer;
+   font-size: 18px;
+}
+
+.flex {
+   display: flex;
+}
+
+p {
+   margin-top: 0px;
+}
+
+.details {
+   display: flex;
+   align-items: baseline;
+}
+
+.twit_body {
+   align-items: flex-start;
+   padding: 20px;
+   border: 1px solid gray;
+   border-radius: 5px;
+   margin-top: 10px;
+}
+
+.margin_left {
+   margin-left: 10px;
+}
+
+.photo {
+   max-width: 100%;
+}

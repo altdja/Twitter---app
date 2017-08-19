@@ -1,0 +1,27 @@
+<div class="main">
+  <h2>Twitter - app</h2>
+
+  <form (submit)="getTweets(search)">
+    <input class="input" [(ngModel)]="search" name="tweet" placeholder="Поиск по хэштегу">
+    <button class="btn" type="submit">Поиск!</button>
+  </form>
+
+  <div *ngFor="let twit of tweets">
+    <div class="flex twit_body">
+      <img src="{{twit.user.profile_image_url}}" alt="">
+      <div class="margin_left">
+        <div class="flex details">
+          <p>{{twit.user.name}} - @{{twit.user.screen_name}} - {{twit.created_at | date:'d MMM'}}</p>
+        </div>
+        <p>{{twit.text}}</p>
+        <div *ngIf="twit.extended_entities">
+          <div *ngFor="let foto of twit.extended_entities.media">
+            <div *ngIf="foto.type === 'photo'">
+              <img class="photo" src="{{foto.media_url_https}}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
