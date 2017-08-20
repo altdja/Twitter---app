@@ -1,6 +1,7 @@
 .main {
    max-width: 600px;
    margin: 0 auto;
+   font-family: Tahoma;
 }
 
 .main h2 {
@@ -66,4 +67,5 @@ p {
    cursor: pointer;
    position: absolute;
    right: 0px;
+   color: red;
 }
