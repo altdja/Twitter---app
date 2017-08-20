@@ -7,12 +7,15 @@ var twitter = new Twit({
     access_token_secret: 'rIm8JcwgHvDJivWiluuMzUTU3QdBzt6owrLeeMNZwIHRv'
 })
 
-module.exports = function (app) {
+module.exports = (app) => {
 
     app.post('/api/search', (req, res) => {
         if (req.body.query) {
-            twitter.get('search/tweets', { q: req.body.query, count: 50 }, function (err, data, response) {
-                return res.json({ code: 200, data: data.statuses });
+            twitter.get('search/tweets', { q: req.body.query, count: 50 }, (err, data, response) => {
+                return res.status(200).send({
+                    code: 200,
+                    data: data.statuses
+                })
             });
         }
     });

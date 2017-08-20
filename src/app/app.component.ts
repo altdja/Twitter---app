@@ -28,7 +28,5 @@ export class AppComponent {
       });
   }
 
-  delete(i) {
-    this.tweets.splice(i, 1);
-  }
+  delete(i) { this.tweets.splice(i, 1); }
 }

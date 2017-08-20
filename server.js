@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 require('./routes')(app);
 
-app.all('*', function (req, res, next) {
+app.all('*', (req, res, next) => {
    if (req.url === '/') return res.sendFile(path.join(__dirname + '/dist/index.html'));
    return res.status(404).send({
       code: 404,
